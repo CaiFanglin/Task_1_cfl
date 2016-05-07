@@ -1,0 +1,44 @@
+//http://ife.baidu.com/task/detail?taskId=3
+  
+    <title>demo_4</title>
+    <meta charset="utf-8">
+    
+  
+    <div style="margin:10px auto;padding:20px;background-color:#eee;border:1px solid #999;height:auto;width:95%;">
+      <div style="float:left;border:1px solid;width:200px;height:200px;">
+      		<div style="margin:17px auto;border:none;width:80%;height:80%">
+            <label style="margin:10px 90px 10px;word-wrap:nowrap;">团队名称</label>
+            <br/><br/>
+            <img src="pie.png" style="width:80%;height:auto;">
+          </div>
+      </div>
+      <div style="width:27px;height:10px;float:left;"></div>
+      <div style="width:70%;height:auto;border:1px solid;float:left;">
+      	<p style="text-indent:2em;margin:10px;font-size:18px;line-height:2em;">
+           前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！
+        </p>
+        <h1  style="margin:10px 50px;align:center;text-align:center;">前言</h1>
+        <p style="text-indent:2em;margin:10px;font-size:18px;line-height:2em;">
+          前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！前端的内容并没有大家想象的那么easy，也是需要花费大量的时间去学习去调试的，自己已经走上了这条不归路，也希望在这条不归路上越走越远，越走越好！
+        </p>
+      </div>
+      <div style="width:27px;height:10px;float:left;"></div>
+      <div style="width:120px;float:left;border:1px solid;height:auto;">
+      	<ul style="list-style:none;">
+          <li>
+          	<img src="pie.png" style="width:80px;height:80px;margin:20px;">
+          </li>
+          <li>
+          	<img src="pie.png" style="width:80px;height:80px;margin:20px;">
+          </li>
+          <li>
+          	<img src="pie.png" style="width:80px;height:80px;margin:20px;">
+          </li>
+          <li>
+          	<img src="pie.png" style="width:80px;height:80px;margin:20px;">
+          </li>
+        </ul>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+	
