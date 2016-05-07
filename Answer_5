@@ -1,0 +1,282 @@
+//http://ife.baidu.com/task/detail?taskId=5
+<html>
+<head>
+<title>Hi task5</title>
+<meta charset="utf-8">
+</head>
+<body>
+<header>
+<div style="background-Color:gray;height:auto;width:100%;">
+	<table style="border:0;width:100%;height:100px">
+		<tbody><tr>
+			<td><img src="pie.png" style="width:20%;height:110%;margin:-10px auto;padding:0 auto;"></td>
+			<td style="text-align:right;width:auto;">
+					<a href="#list1" style="text-decoration:none;color:white;">● 导航链接一 </a>
+          <a href="#list2" style="text-decoration:none;color:white;">● 导航链接二 </a>
+          <a href="#list3" style="text-decoration:none;color:white;">● 导航链接三 </a>
+          <a href="#list4" style="text-decoration:none;color:white;">● 导航链接四</a>
+			</td>
+      <td>
+        &nbsp; &nbsp;
+      </td>
+		</tr>
+	</tbody>
+  </table>
+</div>
+</header>
+<div style="margin:30px;width:95%;height:auto;">
+<table style="width:100%;margin:0px;padding:0px;">
+  <tr>
+		<td style="width:80%">
+      <div style="margin:30px;width:auto;height:auto;">
+  <div id="list1" style="box-shadow:2px 2px #bfbfbf;background-Color:#eee;border:1px solid #bfbfbf;height:auto;margin:2px auto;padding:0px 10px;">
+	<header><h1>文章一级标题</h1></header>
+	<strong><h2 style="color:gray;">文章二级标题</h2></strong>
+	<small style="font-size:15px;color:lightgray;">文章作者&nbsp;&nbsp;文章发表时间</small>
+  <span>
+    <p style="text-indent: 2em;line-height:1.5em;">
+      这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 换行了
+这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+      这是一个很长很长的段落，这是一个很长很长的段落， <a href="#">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，<b><em>这是斜体字</em></b> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。 
+    </p>
+  </span>
+  <img src="pie.png" style="width:20%;height:20%;">
+  <span>
+    <p style="text-indent: 2em;line-height:1.5em;">
+      这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 换行了
+这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+      这是一个很长很长的段落，这是一个很长很长的段落， <a href="#">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，<b><em>这是斜体字</em></b> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。 
+    </p>
+  </span>
+</div>
+ <div id="list2" style="box-shadow:2px 2px #bfbfbf;background-Color:#eee;border:1px solid #bfbfbf;height:auto;margin:10px auto;padding:0px 10px;">
+	<header><h1>另一篇文章一级标题</h1></header>
+	<strong><h2 style="color:gray;">文章二级标题</h2></strong>
+	<small style="font-size:15px;color:lightgray;">文章作者&nbsp;&nbsp;文章发表时间</small>
+  <span>
+    <p style="text-indent: 2em;line-height:1.5em;">
+      这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落， 换行了
+这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+      这是一个很长很长的段落，这是一个很长很长的段落， <a href="#">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，<b><em>这是斜体字</em></b> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。 
+    </p>
+  </span>
+  <img src="pie.png" style="width:20%;height:20%;">
+  <span>
+    <ul style="list-style:none;">
+      <li>列表项目一</li>
+      <li>列表项目二</li>
+      <li>列表项目三</li>
+    </ul>
+  </span>
+</div>
+  <div id="list3" style="box-shadow:2px 2px #bfbfbf;background-Color:#eee;border:1px solid #bfbfbf;height:auto;margin:10px auto;padding:0px 10px;">
+	<header><h1>图片</h1></header>
+	<ul style="list-style:none;">
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li>  
+   <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+      
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+     <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+      
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+      
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+    <li style="border:1px dotted;width:17%;text-align:center;margin:8px 2px;float:left;">
+     
+      <span><img src="pie.png" style="width:66%;height:66%;margin:8px 2px;float:left;"></span>
+    </li> 
+  </ul>
+    <div style="clear:both;"></div>
+</div>
+<div style="box-shadow:2px 2px #bfbfbf;background-Color:#eee;border:1px solid #bfbfbf;height:auto;margin:10px auto;padding:0px 10px;">
+	<header><h1>另一篇文章一级标题</h1></header>
+	<strong><h2 style="color:gray;">文章二级标题</h2></strong>
+	<small style="font-size:15px;color:lightgray;">文章作者&nbsp;&nbsp;文章发表时间</small>
+  <span>
+    <ol>
+      <li>列表项目一</li>
+      <li>列表项目二</li>
+      <li>列表项目三</li>
+    </ol>
+  </span>
+  <span>
+    <label>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格，你们不用写html时候不要加</label>
+   	<table style="width:95%;align:center;text-align:center;margin:0px 25px 5px 25px;" border="1">
+     
+    <thead style="background-color:gray;">  
+    	<tr>
+    		<th>表头</th>
+    		<th>表头</th>
+    		<th>表头</th>
+    	</tr>
+    </thead>
+       <tbody>
+    	<tr>
+    		<td>表内容单元格</td>
+    		<td>表内容单元格</td>
+    		<td><a href="#">操作</a></td>
+    	</tr>
+    	<tr>
+    		<td>表内容单元格</td>
+    		<td>表内容单元格</td>
+    		<td><a href="#">操作</a></td>
+    	</tr>
+    	<tr>
+    		<td>表内容单元格</td>
+    		<td>表内容单元格</td>
+    		<td><a href="#">操作</a></td>
+    	</tr>
+    	<tr>
+    		<td>表内容单元格</td>
+    		<td>表内容单元格</td>
+    		<td><a href="#">操作</a></td>
+    	</tr>
+     </tbody>
+     <tfoot>
+    	<tr>
+    		<td>总计</td>
+    		<td colspan="2">1000</td>
+    	</tr>
+      </tfoot>
+    </table>
+  </span>
+</div> 
+    </td>
+    <td style="width:1%;">
+       &nbsp;
+    </td>
+    <td style="float:left;margin:30px auto;">
+    	<div id="list4" style="box-shadow:2px 2px #bfbfbf;background-Color:#eee;border:1px solid #bfbfbf;height:auto;width:380px;margin:0px;padding:0px;">
+  <header><aside><span style="width:3px;height:10px;background-color:#000;margin:10px;">&nbsp;</span><strong style="text-indent: 2em;font-size:20px;margin:10px 10px;">这是一个侧边栏</strong></aside></header>
+	<span style="margin:10px;">
+    <form>
+      <table style="margin:10px;">
+        <tbody>
+        <tr>
+        	<td style="align:right;text-align:right;">
+             <label>请输入邮箱地址:</label>
+          </td><td>
+            <input placeholder="这是一个文本输入框" style="align:left;text-align:left;" type="email">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+             <label style="color:lightgray;align:right;text-align:center;">邮箱地址请按要求格式输入</label>
+          </td>
+        </tr>
+	       <tr>
+        	<td style="align:right;text-align:right;">
+             <label>请输入密码:</label>
+          </td><td>
+             <input placeholder="这是一个文本输入框" type="password">
+          </td>
+        </tr>
+	      <tr>
+        	<td>
+             <label style="align:right;text-align:right;">请重复输入密码:</label>
+          </td><td>
+          <input placeholder="这是一个文本输入框" type="password">
+          </td>
+              
+          
+        </tr>
+         <tr>
+         	  <td>
+            &nbsp;
+          </td>
+           <td>
+             <label style="color:lightgray">密码请为6-16位英文数字</label>
+          </td>
+        </tr>
+	   		 <tr>
+        	<td style="align:right;text-align:right;">
+              <label style="align:right;text-align:right;">性别:</label>
+          </td><td>
+               <input name="xingbie" type="radio">男
+	     				<input name="xingbie" type="radio">女
+          </td>
+        </tr>
+	       <tr>
+        	<td style="align:right;text-align:right;">
+              <label style="align:right;text-align:right;">城市:</label>
+          </td><td>
+              <select>
+	     	<option selected="selected">北京</option>
+	     	<option>a</option>
+	     	<option>b</option>
+	     	<option>c</option>
+	     </select>
+          </td>
+        </tr>
+	    	 <tr>
+        	<td style="align:right;text-align:right;">
+              <label style="align:right;text-align:right;">爱好:</label>
+          </td><td>
+              <input type="checkbox">运动
+	     <input type="checkbox">艺术
+	     <input type="checkbox">科学
+          </td>
+        </tr>
+	       <tr>
+        	<td style="align:right;text-align:right;">
+              <label>个人描述:</label>
+          </td><td>
+             <textarea cols="18" rows="5">这是一个多行输入框，输入您的个人描述</textarea>
+          </td>
+           
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+	       <td colspan="2">
+             <input value="确 认 提 交" style="height:35px;font-size:20px;width:100%;background-color:blue;border-radius:10px;" type="submit">
+          </td>
+        </tr>
+      </tfoot>
+      </table>
+    </form>
+  </span>  
+</div> 
+    </td>
+  </tr>
+</table>
+</div>
+<footer>
+<div style="background-Color:gray;height:auto;">
+  <div style="align:center;text-align:center;">
+ 		 <input style="align:center;width:100%;background-Color:gray;border:none;text-align:center;height:50px;font-size:20px;" value="版权所有&copy;">
+  </div>
+</div>
+</footer>
+</body>
+</html>
