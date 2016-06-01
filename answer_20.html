@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>answer_20</title>
+</head>
+<style>
+	.container{
+		width: 300px;
+		height:auto;
+		margin:0 auto;
+	}
+	.newDiv{
+		background: rgba(200,200,100,0.6);
+		width:auto;
+		height:30px;
+		line-height:30px;
+		display: inline-block;
+		margin-right:5px;
+		margin-top:10px;
+	}
+	.searched{
+		background:red;
+	}
+</style>
+<body>
+	<div class="container" id="container">
+		<div class="text">
+			<textarea name="value" class="value" id="value" cols="30" rows="10" placeholder="请输入字符，可以特殊字符分割开以表示多次输入"></textarea>
+		</div>
+		<div class="btn">
+			<input type="button" class="insert" id="insert" value="插入">
+			<input type="button" class="search" id="search" value="查询">
+			<input type="text" placeholder="请输入需要查询的内容" id="content" class="content">
+		</div>
+		<div class="result" id="result"></div>
+	</div>
+	<script>
+		var doc = window.document;
+		function getObj(id){
+			return typeof id ==="string"?doc.querySelector("#"+id):id;
+		}
+		var value = getObj("value");
+		var insert = getObj("insert");
+		var search = getObj("search");
+		var content = getObj("content");
+		var result = getObj("result");
+		var data = [];
+
+		function addEventHandler(ele,event,handler){
+			if(doc.addEventListener){
+				ele.addEventListener(event,handler,false);
+			}else if(doc.attachEvent){
+				ele.attachEvent("on"+event,handler);
+			}else{
+				ele["on"+event] = handler;
+			}
+		}
+
+		init();
+		function init(){	
+			addEventHandler(insert,"click",insertFun);
+			addEventHandler(search,"click",searchFun);
+		}
+
+		function insertFun(){
+			var val = value.value.trim();
+			if(val){
+				dataItems = val.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/).filter(function(d){
+					if(d == null || d.length <= 0){
+						return false;
+					}else{
+						return true;
+					}
+				});
+				data = data.concat(dataItems);
+				render();
+				value.value = "";
+			}else{
+				alert("请输入字符，可以特殊字符分割开以表示多次输入！");
+				return;
+			}
+			
+		}
+
+		function getClass(cls){
+			var arr = [];
+			var parent = getObj("container");
+			var ele = parent.getElementsByTagName("*");
+			var len = ele.length;
+			for(var i=0;i<len;i++){
+				var c = ele[i].className.split(" ");
+				var len1 = c.length;
+				for(var j=0;j<len1;j++){
+					if(cls == c[j]){
+						arr.push(ele[i]);
+					}
+				}
+			}
+			return arr;
+		}
+
+		function removeClass(obj,cls){
+			obj.className.replace(new RegExp(cls),"");
+		}
+
+		function searchFun(){
+			if(!content.value.trim()){
+				alert("请输入需要查询的内容！");
+				return;
+			}else{
+				var as = getClass("searched");
+				var len = as.length;
+				for(var i=0;i<len;i++){
+					removeClass(as[i],"searched");
+				}
+				render(content.value.trim());
+				content.value = "";
+			}
+		}
+
+		function render(str){
+			var text = "";
+			data.map(function(d){
+				if(str){
+					d = d.replace(new RegExp(str,"gi"),"<span class='searched'>"+str+"</span>");
+				}
+				text +="<div class='newDiv'>"+d+"</div>";
+			});
+			result.innerHTML = text;
+
+		}
+	</script>
+</body>
+</html>
