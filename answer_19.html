@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>answer_19</title>
+</head>
+<body>
+	<div class="container">
+		<div class="controller" id="controller">
+			<input type="text" id="input">
+			<input type="button" id="leftIn" class="btn" value="左侧入">
+			<input type="button" id="rightIn" class="btn" value="右侧入">
+			<input type="button" id="leftOut" class="btn" value="左侧出">
+			<input type="button" id="rightOut" class="btn" value="右侧出">
+			<input type="button" id="error" class="btn" value="打乱">
+			<input type="button" id="insert" class="btn" value="插入排序">
+			<input type="button" id="bubble" class="btn" value="冒泡排序">
+			<input type="button" id="search" class="btn" value="选择排序">
+			<!-- <input type="button" id="merge" class="btn" value="归并排序">
+			<input type="button" id="fast" class="btn" value="快速排序"> -->
+ 		</div>
+		<div class="content" id="content">	
+		</div>
+	</div>
+	<script>
+		var doc = window.document;
+		var input = getObj("input");
+		
+		var arrHeight = [];
+
+		function getObj(id){
+			return typeof id === "string"?doc.getElementById(id):id;
+		}
+		
+		function addEventHandler(ele,event,handler){
+			if(doc.addEventListener){
+				ele.addEventListener(event,handler,false);
+			}else if(doc.attachEvent){
+				ele.attachEvent("on"+event,handler);
+			}else{
+				ele["on"+event] = handler;
+			}
+		}
+		
+		init();
+
+		function init(){
+			var btn = getClass("controller","btn");
+			var len = btn.length;
+			for(var i=0;i<len;i++){
+				(function(m){
+					addEventHandler(btn[m],"click",function(){
+						switch(btn[m].id){
+							case "leftIn":
+								createDiv(btn[m].id);
+								break;
+							case "leftOut":
+								delDiv(btn[m].id);
+								break;
+							case "rightIn":
+								createDiv(btn[m].id);
+								break;
+							case "rightOut":
+								delDiv(btn[m].id);
+								break;
+							case "insert":
+								insertDiv();
+								break;
+							case "bubble":
+								bubbleDiv();
+								break;
+							case "search":
+								searchDiv();
+								break;
+							case "error":
+								errorDiv();
+								break;
+							default:
+								break;
+						}
+					});
+				})(i);
+			}
+		}
+		function insertDiv(){
+			var newDiv = getClass("content","newDiv");
+			var arrNew = insertMethod();
+			var len = newDiv.length;
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				for(var i=0;i<len;i++){
+					newDiv[i].style.height = arrNew[i]+"px";
+				}
+			}
+		}
+		function insertMethod(){
+			var len = arrHeight.length;
+			for(var i=0;i<len;i++){
+				for(var j=i;j>0;j--){
+					if(arrHeight[j]<arrHeight[j-1]){
+						var temp = arrHeight[j-1];
+						arrHeight[j-1] = arrHeight[j];
+						arrHeight[j] = temp;
+					}
+				}
+			}
+			return arrHeight;
+		}
+		function bubbleDiv(){
+			var newDiv = getClass("content","newDiv");
+			var arrNew = bubbleMethod();
+			var len = newDiv.length;
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				for(var i=0;i<len;i++){
+					newDiv[i].style.height = arrNew[i]+"px";
+				}
+			}
+		}
+		function bubbleMethod(){
+			var len = arrHeight.length;
+			for(var i=0;i<len;i++){
+				for(var j=len-1;j>=i;j--){
+					if(arrHeight[j-1]>arrHeight[j]){
+						var temp = arrHeight[j];
+						arrHeight[j] = arrHeight[j-1];
+						arrHeight[j-1] = temp;
+					}
+				}
+			}
+			return arrHeight;
+		}
+		function searchDiv(){
+		   	var newDiv = getClass("content","newDiv");
+			var arrNew = searchMethod();
+			var len = newDiv.length;
+			console.log(arrHeight);
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				for(var i=0;i<len;i++){
+					newDiv[i].style.height = arrNew[i]+"px";
+				}
+			}	
+		}
+		function searchMethod(){
+			var len = arrHeight.length;
+			for(var i=0;i<len-1;i++){
+				var minIndex = i;
+				for(var j=i+1;j<len;j++){
+					if(arrHeight[j]<arrHeight[minIndex]){
+						minIndex = j;
+					}
+				}
+				if(minIndex!=i){
+					var temp = arrHeight[i];
+					arrHeight[i] = arrHeight[minIndex];
+					arrHeight[minIndex] = temp;
+				}
+			}
+			return arrHeight;
+		}
+
+		function errorDiv(){
+			var newDiv = getClass("content","newDiv");
+			var arrNew = errorMethod();
+			var len = newDiv.length;
+			console.log(arrHeight);
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				for(var i=0;i<len;i++){
+					newDiv[i].style.height = arrNew[i]+"px";
+				}
+			}
+		}
+		function errorMethod(){
+			var len = arrHeight.length;
+			arrHeight.sort(function(){
+				return 0.5 - Math.random();
+			})
+			return arrHeight;
+		}
+		function clickNewDel(){
+			var newDiv = getClass("content","newDiv");
+			var len = newDiv.length;
+			for(var i=0;i<len;i++){
+				(function(m){
+					addEventHandler(newDiv[m],"click",delElement);
+				})(i);
+			}
+		}
+		function validate(){	
+			if(!(input.value.match(/^\d+$/)) || input.value<10 || input.value>100){
+				input.value = "";
+				alert("请输入10-100之间的整数！");
+				return;
+			}
+		}
+		function createDiv(id){
+			var newDiv = doc.createElement("div");
+			newDiv.className = "newDiv";
+			newDiv.style.width = "50px";
+			newDiv.style.height = input.value+"px";
+			newDiv.style.backgroundColor = "red";
+			newDiv.style.display = "inline-block";
+			newDiv.style.marginRight = "5px";
+			newDiv.style.marginTop = "10px";
+			newDiv.style.cursor = "default";
+			var val = id;
+			if(val == "leftIn"){
+				leftIn(newDiv);
+			}else{
+				rightIn(newDiv);
+			}
+		}
+		function leftIn(newDiv){
+			var arr = getClass("content","newDiv");
+			var content = getObj("content");
+			content.insertBefore(newDiv,arr[0]);
+			clickNewDel();
+			arrInsert();
+		}
+		function rightIn(newDiv){
+			var content = getObj("content");
+			content.appendChild(newDiv);
+			clickNewDel();
+			arrInsert();
+		}
+		function delDiv(id){
+			var val =id;
+			if(val == "leftOut"){
+				leftOut();
+			}else{
+				rightOut();
+			}
+		}
+		function leftOut(){
+			var arr = getClass("content","newDiv");
+			var len = arr.length;
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				del(arr[0]);
+				clickNewDel();
+				arrInsert();
+			}
+		}
+		function rightOut(){
+			var arr = getClass("content","newDiv");
+			var len = arr.length;
+			if(len<=0){
+				alert("请添加数据！");
+				return;
+			}else{
+				del(arr[arr.length-1]);
+				clickNewDel();
+				arrInsert();
+			}
+		}
+		function del(newDiv){
+			var content = getObj("content");
+			content.removeChild(newDiv);
+			arrInsert();
+		}
+		function getClass(id,cls){
+			var arr = [];
+			var parent = getObj(id);
+			var ele = parent.getElementsByTagName("*");
+			var len = ele.length;
+			for(var i=0;i<len;i++){
+				var classes = ele[i].className.split(" ");
+				var len1 = classes.length;
+				for(var j=0;j<len1;j++){
+					if(cls == classes[j]){
+						arr.push(ele[i]);
+					}
+				}
+			}
+			return arr;
+		}
+		function delElement(){
+			var content = getObj("content");
+			content.removeChild(this);
+			arrInsert();
+		}
+		//改变数组中的参数的index
+		function arrInsert(){
+			arrHeight = [];
+			var newDiv = getClass("content","newDiv");
+			var len = newDiv.length;
+			for(var i=0;i<len;i++){
+				arrHeight.push(newDiv[i].style.height.split("px")[0]);
+			}
+			return arrHeight;
+		}
+	</script>
+</body>
+</html>
